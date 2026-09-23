@@ -50,6 +50,11 @@
     background: rgba(255, 255, 255, 0.06);
 }
 
+.passkei-save-success {
+    background: rgba(127, 227, 191, 0.16);
+    color: #7fe3bf;
+}
+
 .passkei-dropdown-empty {
     padding: 8px 10px;
     color: #8fa2a7;

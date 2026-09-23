@@ -1,9 +1,20 @@
-## 0.1.2 (Upcoming)
+## Upcoming
+
+- Implement PassKeys to be saved in the login vault.
+- "Save new login" prompt after a successful sign-in on an unrecognized site.
+
+## 0.1.2 
 
 Production improvements.
 
-- [ ] Smarter username-field detection for complex single-page-app login forms.
-- [ ] "Save new login" prompt after a successful sign-in on an unrecognized site.
+- Smarter username-field detection for complex single-page-app login forms.
+- "Save this login to PassKei" on dropdown when inputs entered.
+- Base sites will match the same site as its sudomains and vice versa.
+- Updated sign out button styles and added a confirm modal.
+- Added an add password button that links to PassKei's add modal.
+- Added site home actions that open a saved URL and autofill the login.
+- Added success feedback after saving an inline login.
+- Updated the static urls in updates.json and manifest.json.
 
 ## 0.1.1
 

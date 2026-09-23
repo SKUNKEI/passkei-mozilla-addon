@@ -35,6 +35,8 @@ async function hasActiveSession(baseDomain) {
     const cookieNames = [
         `${baseDomain.split('.').slice(0, -1).join('.') || 'skunkei'}_SESSID`,
         'skunkei_SESSID',
+        'api_SESSID',
+        'pass_SESSID',
         `api.${baseDomain}_SESSID`
     ].filter((value, index, array) => value && array.indexOf(value) === index);
 

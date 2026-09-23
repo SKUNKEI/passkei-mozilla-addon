@@ -35,6 +35,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
+}
+
+.pk-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .pk-brand {
@@ -81,6 +88,12 @@ body {
     margin: 0;
     color: var(--pm-text-muted);
     font-size: 12px;
+}
+
+.pk-save-title {
+    margin: 0;
+    font-size: 16px;
+    color: var(--pm-text);
 }
 
 .pk-alert {
@@ -168,8 +181,41 @@ body {
     font-weight: 800;
 }
 
+.pk-btn-secondary {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--pm-text-soft);
+}
+
+.pk-btn-danger {
+    background: rgba(230, 126, 126, 0.16);
+    border-color: rgba(230, 126, 126, 0.5);
+    color: #ffd0d0;
+    font-weight: 700;
+}
+
 .pk-full {
     width: 100%;
+}
+
+.pk-add-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 28px;
+    padding: 0 8px;
+    border-radius: 8px;
+    border: 1px solid var(--pm-border-strong);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--pm-text-soft);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pk-add-btn[hidden],
+.pk-icon-btn[hidden] {
+    display: none;
 }
 
 .pk-icon-btn {
@@ -182,6 +228,12 @@ body {
     cursor: pointer;
 }
 
+.pk-logout-btn {
+    background: rgba(230, 126, 126, 0.18);
+    border-color: rgba(230, 126, 126, 0.5);
+    color: #ffd1d1;
+}
+
 .pk-search {
     min-height: 34px;
     padding: 0 10px;
@@ -190,6 +242,43 @@ body {
     background: rgba(255, 255, 255, 0.04);
     color: var(--pm-text);
     font: 13px Inter, "Segoe UI", sans-serif;
+}
+
+.pk-confirm {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7, 16, 21, 0.74);
+    z-index: 10;
+}
+
+.pk-confirm[hidden] {
+    display: none;
+}
+
+.pk-confirm-card {
+    width: min(280px, calc(100% - 24px));
+    background: var(--pm-panel);
+    border: 1px solid var(--pm-border-strong);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pk-confirm-card h2 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--pm-text);
+}
+
+.pk-confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 }
 
 .pk-item-list {
@@ -219,6 +308,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+
+.pk-home-btn {
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.pk-item-url {
+    color: var(--pm-text-muted);
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .pk-item-site {

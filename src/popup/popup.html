@@ -12,8 +12,24 @@
                 <img class="pk-brandmark" src="logo.png" alt="" aria-hidden="true" />
                 <span class="pk-h1">PassKei</span>
             </a>
-            <button class="pk-icon-btn" id="pkLogoutBtn" type="button" title="Sign out" hidden>&#x2192;</button>
+            <div class="pk-header-actions">
+                <button class="pk-add-btn" id="pkAddPasswordBtn" type="button" title="Add password" hidden>
+                    <span aria-hidden="true">＋</span>
+                    <span>Add</span>
+                </button>
+                <button class="pk-icon-btn pk-logout-btn" id="pkLogoutBtn" type="button" title="Sign out" hidden aria-label="Sign out">⎋</button>
+            </div>
         </header>
+
+        <div id="pkLogoutConfirm" class="pk-confirm" hidden>
+            <div class="pk-confirm-card" role="dialog" aria-modal="true" aria-labelledby="pkLogoutConfirmTitle">
+                <h2 id="pkLogoutConfirmTitle">Sign out?</h2>
+                <div class="pk-confirm-actions">
+                    <button type="button" class="pk-btn pk-btn-secondary" id="pkCancelLogoutBtn">Cancel</button>
+                    <button type="button" class="pk-btn pk-btn-danger" id="pkConfirmLogoutBtn">Signout</button>
+                </div>
+            </div>
+        </div>
 
         <section id="pkLoginPanel" class="pk-panel" hidden>
             <div class="pk-alert" id="pkLoginFeedback" role="alert" hidden></div>
@@ -37,6 +53,28 @@
         <section id="pkVaultPanel" class="pk-panel" hidden>
             <input type="search" class="pk-search" id="pkSearchInput" placeholder="Search vault..." />
             <ul class="pk-item-list" id="pkItemList"></ul>
+        </section>
+
+        <section id="pkSavePanel" class="pk-panel" hidden>
+            <h2 class="pk-save-title">Save new login?</h2>
+            <p class="pk-muted" id="pkSaveDetails">Save this login to your PassKei vault.</p>
+            <label class="pk-field">
+                <span>Website</span>
+                <input type="text" id="pkSaveSite" autocomplete="url" />
+            </label>
+            <label class="pk-field">
+                <span>Username</span>
+                <input type="text" id="pkSaveUsername" autocomplete="username" />
+            </label>
+            <label class="pk-field">
+                <span>Password</span>
+                <input type="password" id="pkSavePassword" autocomplete="new-password" />
+            </label>
+            <div class="pk-confirm-actions">
+                <button class="pk-btn pk-btn-secondary" id="pkCancelSaveBtn" type="button">Cancel</button>
+                <button class="pk-btn pk-btn-primary" id="pkConfirmSaveBtn" type="button">Save new login</button>
+            </div>
+            <div class="pk-alert" id="pkSaveFeedback" role="alert" hidden></div>
         </section>
     </main>
     <script type="module" src="popup.js"></script>
