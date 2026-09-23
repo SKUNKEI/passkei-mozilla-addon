@@ -1,0 +1,56 @@
+.passkei-badge {
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    background-image: url("../../icons/full-circle.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 2147483000;
+    padding: 0;
+}
+
+.passkei-badge:hover {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+.passkei-dropdown {
+    position: absolute;
+    z-index: 2147483001;
+    background: #0f181a;
+    border: 1px solid rgba(171, 188, 196, 0.24);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 240px;
+    overflow-y: auto;
+    font: 13px Inter, "Segoe UI", sans-serif;
+}
+
+.passkei-dropdown-item {
+    text-align: left;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: #edf3f5;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.passkei-dropdown-item:hover,
+.passkei-dropdown-item:focus-visible {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.passkei-dropdown-empty {
+    padding: 8px 10px;
+    color: #8fa2a7;
+}

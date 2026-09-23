@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>PassKei by SKUNKEI</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+    <main class="pk-popup" aria-label="PassKei">
+        <header class="pk-header">
+            <a class="pk-brand" href="https://pass.skunkei.com/" target="_blank" rel="noopener noreferrer" aria-label="Open PassKei">
+                <img class="pk-brandmark" src="logo.png" alt="" aria-hidden="true" />
+                <span class="pk-h1">PassKei</span>
+            </a>
+            <button class="pk-icon-btn" id="pkLogoutBtn" type="button" title="Sign out" hidden>&#x2192;</button>
+        </header>
+
+        <section id="pkLoginPanel" class="pk-panel" hidden>
+            <div class="pk-alert" id="pkLoginFeedback" role="alert" hidden></div>
+            <form id="pkLoginForm" novalidate>
+                <label class="pk-field">
+                    <span>Email address</span>
+                    <input type="email" id="pkEmail" autocomplete="username" required />
+                </label>
+                <label class="pk-field">
+                    <span>Master password</span>
+                    <input type="password" id="pkPassword" autocomplete="current-password" required />
+                </label>
+                <label class="pk-check">
+                    <input type="checkbox" id="pkRemember" checked />
+                    <span>Keep me signed in</span>
+                </label>
+                <button class="pk-btn pk-btn-primary pk-full" id="pkLoginSubmit" type="submit">Sign in</button>
+            </form>
+        </section>
+
+        <section id="pkVaultPanel" class="pk-panel" hidden>
+            <input type="search" class="pk-search" id="pkSearchInput" placeholder="Search vault..." />
+            <ul class="pk-item-list" id="pkItemList"></ul>
+        </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+</body>
+</html>
